@@ -1,0 +1,46 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  .folder {
+    padding: 8px 4px;
+    background-color: #efefef;
+    border: 1px solid gray;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    .action-btns button {
+      margin-right: 5px;
+      background-color: white;
+      border: 1px solid black;
+      outline: none;
+      padding: 4px;
+      font-size: 12px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: gray;
+        color: white;
+      }
+    }
+  }
+  
+  .file {
+    padding: 5px;
+    background-color: #efefef;
+    border: 1px solid gray;
+    margin-top: 8px;
+  }
+  
+  .folder-content {
+    margin-left: 20px;
+  
+    .input-container {
+      margin: 8px;
+    }
+  }
+  

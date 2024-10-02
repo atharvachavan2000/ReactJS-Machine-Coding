@@ -1,0 +1,30 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.progress-bar {
+  border: 1px solid #ccc;
+  height: 20px;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+}
+
+.filled {
+  padding: 5px;
+  background-color: #00c251;
+}
+
+.empty {
+  padding: 5px;
+}
+
+.white-text {
+  color: white;
+}
