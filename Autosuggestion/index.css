@@ -1,0 +1,55 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.conatiner {
+  position: relative;
+  width: 300px;
+}
+
+.container > input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.loading,
+.error {
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.error {
+  color: red;
+}
+
+.suggestions-list {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover,
+  &[aria-selected="true"] {
+    background: #ccc;
+    color: black;
+  }
+}
