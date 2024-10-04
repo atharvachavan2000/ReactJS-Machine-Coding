@@ -1,30 +1,63 @@
+import useToast from "./hooks/use-toast";
 import "./styles.css";
-import ProgressBar from "./components/ProgressBar";
-import { useState, useEffect, useRef } from "react";
 
 export default function App() {
-  const [percentage, setPercentage] = useState(0);
-
-  const intervalRef = useRef(null);
-
-  useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setPercentage((val) => val + 1);
-    }, 100);
-
-    return () => clearInterval(intervalRef.current);
-  }, []);
-
-  useEffect(() => {
-    if (percentage > 100) {
-      clearInterval(intervalRef.current);
-    }
-  }, [percentage]);
+  const { ToastComponent, triggerToast } = useToast("top-right");
 
   return (
-    <div className="App">
-      <h3>Progress Bar </h3>
-      <ProgressBar percentage={percentage} />
+    <div className="container">
+      <h4>Click on any of the buttons to trigger a toast!</h4>
+      <div className="buttons">
+        <button
+          className="buttons__button"
+          onClick={() =>
+            triggerToast({
+              severity: "success",
+              message: "This is a success",
+              animation: "fade",
+            })
+          }
+        >
+          Success
+        </button>
+        <button
+          className="buttons__button"
+          onClick={() =>
+            triggerToast({
+              severity: "error",
+              message: "This is an Error",
+              animation: "pop",
+            })
+          }
+        >
+          Error
+        </button>
+        <br />
+        <button
+          className="buttons__button"
+          onClick={() =>
+            triggerToast({
+              severity: "warning",
+              message: "This is a Warning",
+              animation: "slide",
+            })
+          }
+        >
+          Warning
+        </button>
+        <button
+          className="buttons__button"
+          onClick={() =>
+            triggerToast({
+              severity: "info",
+              message: "This is an Information",
+            })
+          }
+        >
+          Info
+        </button>
+      </div>
+      {ToastComponent}
     </div>
   );
 }

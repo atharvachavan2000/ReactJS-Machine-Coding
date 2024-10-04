@@ -1,0 +1,108 @@
+.toast {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 8px;
+  min-height: 40px;
+  color: white;
+  gap: 5px;
+  padding: 10px;
+}
+
+.toast--success {
+  background-color: #4caf50;
+}
+
+.toast--error {
+  background-color: #f44336;
+}
+
+.toast--warning {
+  background-color: #ff9800;
+}
+
+.toast--info {
+  background-color: #2196f3;
+}
+
+.toast-container {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast__close-btn {
+  border: none;
+  background: transparent;
+}
+
+.top-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.bottom-left {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s;
+}
+
+.popup {
+  animation: popup 0.5s;
+}
+
+.slideIn {
+  animation: slideIn 0.5s;
+}
